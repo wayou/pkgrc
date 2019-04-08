@@ -1,0 +1,19 @@
+{
+  "name": "pkgrc",
+  "version": "0.1.0",
+  "desription": "get a predefiend rc file for node package manager npm or yarn",
+  "bin": {
+    "pkgrc": "./cli.js"
+  },
+  "main": "index.js",
+  "homepage": "https://github.com/wayou/pkgrc",
+  "keywords": [
+    "rcfile",
+    "npm",
+    "npmrc",
+    "yarn",
+    "yarnrc"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}
