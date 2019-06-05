@@ -1,5 +1,6 @@
 const https = require("https");
 const fs = require("fs");
+const pkg = require("./package.json");
 
 const NPM_RC_FILE =
   "https://gist.githubusercontent.com/wayou/baa18849de3424db5d7ca24e94645c25/raw/.npmrc";
@@ -37,14 +38,21 @@ function fetchFile(url, fileName, cb) {
     });
 }
 
-module.exports = function(type) {
+module.exports = function(type = "npm") {
+  if (type === "-v" || type === "-V" || type === "-version") {
+    console.log(pkg.version);
+    return;
+  }
   let fileUrl = NPM_RC_FILE,
     fileName = ".npmrc";
   if (type === "yarn") {
     fileUrl = YARN_RC_FILE;
     fileName = ".yarnrc";
+  } else if (type === "npm") {
+    fetchFile(fileUrl, fileName, function() {
+      console.log(`${fileName} created`);
+    });
+  } else {
+    console.error("usage: pkgrc [npm|yarn]");
   }
-  fetchFile(fileUrl, fileName, function() {
-    console.log(`${fileName} created`);
-  });
 };

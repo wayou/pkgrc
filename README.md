@@ -28,9 +28,18 @@ puppeteer_download_host="https://npm.taobao.org/mirrors"
 chromedriver_cdnurl="https://npm.taobao.org/mirrors/chromedriver"
 operadriver_cdnurl="https://npm.taobao.org/mirrors/operadriver"
 phantomjs_cdnurl="https://npm.taobao.org/mirrors/phantomjs"
+fse_binary_host_mirror="https://npm.taobao.org/mirrors/fsevents"
 ```
 
 ## Usage
+
+SYNOPSIS:
+
+```sh
+pkgrc [type]
+```
+
+The `type` can be one of `npm`, `yarn`. When ommited default to `npm`.
 
 ```sh
 # fetch `.npmrc`
