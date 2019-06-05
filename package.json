@@ -1,6 +1,6 @@
 {
   "name": "pkgrc",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "desription": "get a predefiend rc file for node package manager npm or yarn",
   "bin": {
     "pkgrc": "./cli.js"
@@ -14,6 +14,5 @@
     "yarn",
     "yarnrc"
   ],
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }

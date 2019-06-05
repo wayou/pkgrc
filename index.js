@@ -39,20 +39,23 @@ function fetchFile(url, fileName, cb) {
 }
 
 module.exports = function(type = "npm") {
-  if (type === "-v" || type === "-V" || type === "-version") {
+  if (type === "-v" || type === "-V" || type === "--version") {
     console.log(pkg.version);
     return;
   }
+  type = type || "npm";
   let fileUrl = NPM_RC_FILE,
     fileName = ".npmrc";
   if (type === "yarn") {
     fileUrl = YARN_RC_FILE;
     fileName = ".yarnrc";
   } else if (type === "npm") {
-    fetchFile(fileUrl, fileName, function() {
-      console.log(`${fileName} created`);
-    });
+    fileUrl = NPM_RC_FILE;
   } else {
     console.error("usage: pkgrc [npm|yarn]");
+    return;
   }
+  fetchFile(fileUrl, fileName, function() {
+    console.log(`${fileName} created`);
+  });
 };
