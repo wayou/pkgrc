@@ -2,10 +2,10 @@ const https = require("https");
 const fs = require("fs");
 
 const NPM_RC_FILE =
-  "https://gist.githubusercontent.com/wayou/baa18849de3424db5d7ca24e94645c25/raw/84910c72f9e600d665e088deafbcd8c7cedcf9d4/.npmrc";
+  "https://gist.githubusercontent.com/wayou/baa18849de3424db5d7ca24e94645c25/raw/.npmrc";
 
 const YARN_RC_FILE =
-  "https://gist.githubusercontent.com/wayou/a1a6fb1fc5153bc20829c7b2700ec0bc/raw/0a33e57630475326aaf6f19b5501605f4afe640e/.yarnrc";
+  "https://gist.githubusercontent.com/wayou/a1a6fb1fc5153bc20829c7b2700ec0bc/raw/.yarnrc";
 
 /**
  * download file

@@ -1,6 +1,6 @@
 {
   "name": "pkgrc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "desription": "get a predefiend rc file for node package manager npm or yarn",
   "bin": {
     "pkgrc": "./cli.js"
